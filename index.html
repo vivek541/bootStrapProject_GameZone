@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=1366px, initial-scale=1, shrink-to-fit=no"
     />
 
     <!-- Bootstrap CSS -->
@@ -33,6 +33,18 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap"
       rel="stylesheet"
     />
+
+    <script>
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+        function showMobileMessage() {
+            if (isMobileDevice()) {
+                alert("Please view this website on a desktop for the best experience.");
+            }
+        }
+        window.onload = showMobileMessage;
+    </script>
 
     <title>GameVault</title>
   </head>
